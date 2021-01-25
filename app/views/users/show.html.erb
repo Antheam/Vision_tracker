@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+
+Welcome <%=  @user.name %>
+<br>
+Your goals:
+<br>
+<br>
+<% @goals.each do |goal| %>
+  <%= goal.title %>
+  <%= link_to "View", goals_path(goal) %>
+  <br>
+  <br>
+  <% end %>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+
+
+
+

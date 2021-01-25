@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @goal.user.name %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @goal.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @goal.description %>
+</p>
+
+<p>
+  <strong>Counter:</strong>
+  <%= @goal.counter %>
+</p>
+
+<p>
+  <strong>Target:</strong>
+  <%= @goal.target %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @goal.completed %>
+</p>
+
+
+<%= button_to "I took some action today!",goal_path(@goal), method: :patch %>
+
+<br>
+<br>
+
+<%= link_to 'Edit', edit_goal_path(@goal) %> |
+<%= link_to 'Back', goals_path %>
