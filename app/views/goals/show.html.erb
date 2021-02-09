@@ -26,12 +26,28 @@
 </p>
 
 <p>
-  <strong>Completed:</strong>
-  <%= @goal.completed %>
+  You have taken   <%= @goal.counter %> steps towards your target of  <%= @goal.target %>
+</p>
+
+<div>
+  <%= check_goal_completion(@goal) %>
+</div>
+
+
+<p> 
+
 </p>
 
 
-<%= button_to "I took some action today!",goal_path(@goal), method: :patch %>
+
+
+<%= button_to "I took some action today!",goal_path(@goal), params:{ goal: {counter: @goal.counter += 1 }}, method: :patch %>
+
+
+
+<%= button_to "Delete goal", goal_path(@goal), method: :delete %>
+
+
 
 <br>
 <br>

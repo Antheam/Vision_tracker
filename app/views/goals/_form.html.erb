@@ -11,10 +11,7 @@
     </div>
   <% end %>
 
- <% if users.present?  %>
-   <%= form.collection_select :user_id, users, :id, :name %>
 
-<%  end %>
   
 
 
@@ -26,11 +23,6 @@
   <div class="field">
     <%= form.label :description %>
     <%= form.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= form.label :counter %>
-    <%= form.number_field :counter %>
   </div>
 
   <div class="field">

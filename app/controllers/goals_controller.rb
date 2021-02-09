@@ -23,6 +23,7 @@ class GoalsController < ApplicationController
   # POST /goals
   def create
     @goal = Goal.new(goal_params)
+    @goal.user = current_user
 
     if @goal.save
       redirect_to @goal, notice: 'Goal was successfully created.'
@@ -31,15 +32,22 @@ class GoalsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /goals/1
-  def update
+  def update_counter
     @goal.counter +=1
     @goal.save
           redirect_to @goal, notice: 'Goal was successfully updated.'
-
+        
   end
 
 
+def update
+  @goal.update(goal_params)
+  # if @goal.save
+    redirect_to @goal, notice: 'goal was successfully updated.'
+#  else
+#     render :edit
+  
+end
 
 
 
