@@ -19,11 +19,20 @@ Your goals:
   <%= @user.name %>
 </p>
 
+
+<% if current_user == @user %>
 <%= link_to "Add Goal", new_goal_path%>
+<% end %>
 <br>
+
+<% if current_user == @user %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+    <% else %>
+<%= link_to 'Back', users_path %>
+
+<% end %>
 
 
 

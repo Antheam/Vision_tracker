@@ -1,5 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @current_user ||= User.find_by(id: session[:user_id])
+    if current_user
+      redirect_to user_path(current_user)
+    else 
+      render :index
+    end
   end
 end

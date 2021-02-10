@@ -32,12 +32,6 @@ class GoalsController < ApplicationController
     end
   end
 
-  def update_counter
-    @goal.counter +=1
-    @goal.save
-          redirect_to @goal, notice: 'Goal was successfully updated.'
-        
-  end
 
 
 def update

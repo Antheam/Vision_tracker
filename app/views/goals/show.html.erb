@@ -40,12 +40,15 @@
 
 
 
+<% if current_user == @goal.user %>
 
-<%= button_to "I took some action today!",goal_path(@goal), params:{ goal: {counter: @goal.counter += 1 }}, method: :patch %>
+  <%= button_to "I took some action today!",goal_path(@goal), params:{ goal: {counter: @goal.counter += 1 }}, method: :patch %>
 
 
 
-<%= button_to "Delete goal", goal_path(@goal), method: :delete %>
+  <%= button_to "Delete goal", goal_path(@goal), method: :delete %>
+
+<% end %>
 
 
 
