@@ -28,7 +28,11 @@ Your goals:
 <% if current_user == @user %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%
+=begin%>
+ <%= link_to 'Back', users_path %> 
+<%
+=end%>
     <% else %>
 <%= link_to 'Back', users_path %>
 

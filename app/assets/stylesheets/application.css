@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  position: absolute;
+  bottom: 2px;
+}
+
+.bold {
+  text-transform: uppercase;
+}
+
+.navbar {
+  z-index: 1;
+}
+
+.home-button {
+  position: absolute;
+  z-index: 2;
+  top: 350px;
+  /* border-style: solid;
+  border-color: blue; */
+}
+
+.home-button.one {
+  left: 585px;
+}
+
+.home-button.two {
+  left: 695px;
+}

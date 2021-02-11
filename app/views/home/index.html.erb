@@ -1,16 +1,34 @@
 
-
-
-<h1> Welcome <% if current_user %> </h1>
+<%
+=begin%>
+ <h1 class ="bold"> Welcome <% if current_user %> </h1>
    <%= current_user.name  %> 
 <% else %>
 Guest
 
 <% end %>
-hii
+hii 
+<%
+=end%>
+
+<div class ="home-button one">
+   <%= button_to "SIGN UP", new_user_registration_path, method: :get, class: " p-3 btn btn-info" %>
+</div>
+<div class= "home-button two">
+   <%= button_to "LOG IN", new_user_session_path, method: :get, class: " p-3 btn btn-info" %>
+</div>
+
+<%
+=begin%>
+ <div class= "home-button two">
+<%= button_to "LOG IN", new_user_session_path, method: :get, class: "p-3 mb-2 btn btn-info" %>
+</div> 
+<%
+=end%>
 
 
 
-<img src="/images/sky.jpeg"/>
+<img src="/images/sky.jpeg" width = 100% height = 100%>
+
 
 
