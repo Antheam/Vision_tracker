@@ -17,38 +17,6 @@
 # g5 = Goal.create(user_id: m.id, title: "knitting", description:"dhfkjshdjfdjkhf", target:100)
 # g6 = Goal.create(user_id: m.id, title: "become a good cooker", description:"ldfkhdsadffha", target:100)
 
-
-
-User.destroy_all
-Goal.destroy_all
-
-  #  https://github.com/faker-ruby/faker
-  # add
-  # gem 'faker'
-  # to group :development, :test
-
-User.create!(name: 'Harry Potter', email: '2@2', password: '222222') # this will be your 'admin' account to sign in and check if shit works. 
-
-
-10.times do # these will be random users
-  name = Faker::Name.name
-  email = Faker::Internet.unique.email
-  password = Faker::Alphanumeric.alphanumeric(number: 10)
-
-  User.create!(name: name, email: email, password: password)
-end
-
-20.times do # can change this number to a bigger one for more goal seeds
-  # user_id = (1..11).to_a.sample #random number upto 10 as we have made 10 users
-  title = Faker::Lorem.word
-  description = Faker::Lorem.paragraph(sentence_count: 4)
-  target = [100, 150, 200].sample
-
-  Goal.create!(user_id: User.first.id, title: title, description: description, target: target)
-end# g6 = Goal.create(user_id: m.id, title: "become a good cooker", description:"ldfkhdsadffha", target:100)
-
-
-
 User.destroy_all
 Goal.destroy_all
 

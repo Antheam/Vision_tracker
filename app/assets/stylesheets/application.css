@@ -49,3 +49,21 @@ img {
 .home-button.two {
   left: 695px;
 }
+
+.circle-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-width: thin;
+  border-style: solid;
+  text-align: center;
+  padding: 10px;
+  padding-top: 30px;
+  margin: 10px;
+  border-color: rgb(110, 113, 198);
+}

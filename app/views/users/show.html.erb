@@ -5,13 +5,30 @@ Welcome <%=  @user.name %>
 <br>
 Your goals:
 <br>
+ <%
+=begin%>
+ Following: <%= @user.following%> 
+ <br>
+ Followers: <%= @user.follower%> 
+<%
+=end%>
+
+
 <br>
+<br>
+<div class = "circle-container">
+
 <% @goals.each do |goal| %>
-  <%= goal.title %>
-  <%= link_to "View", goal_path(goal) %>
+  <div class = "circle">
+    <%= goal.title %>
+    <br>
+    <%= link_to "View", goal_path(goal) %>
+    </div>
+  
   <br>
   <br>
   <% end %>
+  </div>
 
 
 <p>
@@ -28,11 +45,7 @@ Your goals:
 <% if current_user == @user %>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%
-=begin%>
- <%= link_to 'Back', users_path %> 
-<%
-=end%>
+
     <% else %>
 <%= link_to 'Back', users_path %>
 
